@@ -6,33 +6,31 @@
 
 :root {
   --text-color: white;
-  --bg-url:url(./Assets/bg-mobile.jpg);
-  --stroke-color:rgba(255, 255, 255, 0.5);
-  --surface-color:rgba(255, 255, 255, 0.05);
+  --bg-url: url(./Assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./Assets/moon-stars.svg);
-  
 }
 
-.light{
-  --text-color:black;
-  --bg-url:url(./Assets/bg-mobile-light.jpg);
-  --stroke-color:rgba(0, 0, 0, 0.5);
-  --surface-color:rgba(0, 0, 0, 0.05);
+.light {
+  --text-color: black;
+  --bg-url: url(./Assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./Assets/sun.svg);
-
 }
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
-
 
 #container {
   width: 100%;
@@ -49,7 +47,6 @@ body * {
 
 #profile img {
   width: 112px;
-  
 }
 
 #profile p {
@@ -63,7 +60,6 @@ body * {
   position: relative;
   width: 64px;
   margin: 4px auto;
-
 }
 
 #switch button {
@@ -85,7 +81,6 @@ body * {
   left: initial;
 }
 
-
 #switch span {
   display: block;
   width: 64px;
@@ -95,7 +90,6 @@ body * {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
-
 }
 
 /* links */
@@ -105,7 +99,6 @@ ul {
   flex-direction: column;
   gap: 16px;
   padding: 24px 0px;
-  
 }
 ul li a {
   display: flex;
@@ -120,7 +113,7 @@ ul li a {
   -webkit-backdrop-filter: blur(4px);
   text-decoration: none;
   font-weight: 500;
-  transition:background 0.5s;
+  transition: background 0.5s;
 }
 /* pseudo-selector */
 ul li a:hover {
@@ -145,11 +138,22 @@ ul li a:hover {
   padding: 24px 0px;
   font-size: 24px;
 }
-#social-links a:hover{
+#social-links a:hover {
   background: var(--highlight-color);
 }
 footer {
   padding: 24px 0px;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./Assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./Assets/bg-desktop-light.jpg);
+  }
 }
